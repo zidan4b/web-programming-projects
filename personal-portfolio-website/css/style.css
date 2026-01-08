@@ -1,0 +1,216 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+body.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #14cfbc, #042c54);
+  color: #0b1320;
+  font-family: Arial, "Segoe UI", Roboto, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+#header {
+  text-align: center;
+  color: #e6e6e6;
+  padding: 18px 10px;
+}
+#header h1 {
+  font-size: 1.8rem;
+  margin-top: 0.4rem;
+}
+.subtitle {
+  margin-top: 4px;
+  color: #dce8ea;
+}
+
+/* Photo */
+#photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 6px auto 10px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 8px;
+  text-align: center;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  margin: 0 6px;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+nav a:hover {
+  background: #14cfbc;
+  color: #042c54;
+}
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* Main content wrapper */
+#main {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px 24px;
+}
+
+/* Boxs */
+.box {
+  background: #14cfbc;
+  color: #06223f;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 14px 0;
+}
+.box h1,
+.box h2 {
+  color: #042c54;
+  margin-bottom: 6px;
+}
+.box ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+.box p,
+.box li {
+  font-size: 1rem;
+}
+
+/* Links inside content */
+a {
+  color: #042c54;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Projects page ===== */
+#projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 12px auto 28px;
+}
+.project-card {
+  width: 300px;
+  background: #14cfbc;
+  color: #000;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.project-card h3 {
+  color: #042c54;
+  margin: 6px 0 4px;
+  font-size: 1.05rem;
+}
+.project-card p {
+  font-size: 0.95rem;
+}
+
+/* ===== Contact page ===== */
+.contact-form {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.contact-form label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: bold;
+  color: #042c54;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background: #f7ffff;
+  font-size: 1rem;
+  color: #0b1320;
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+.contact-form button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #042c54;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  opacity: 0.95;
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+  color: #e6e6e6;
+  padding: 12px 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.95rem;
+  margin-top: 30px;
+}
+
+/* ===== Page-specific photo sizes ===== */
+body.home #photo {
+  width: 180px;
+  height: auto;
+}
+body.resume #photo {
+  width: 170px;
+  height: 170px;
+}
+body.projects #photo {
+  width: 130px;
+  height: 130px;
+}
+body.contact #photo {
+  width: 150px;
+  height: 150px;
+}
+
+/* Responsive tweaks */
+@media (min-width: 700px) {
+  body.resume #photo {
+    width: 190px;
+    height: 190px;
+  }
+  .box {
+    padding: 1.5rem 2rem;
+  }
+}
