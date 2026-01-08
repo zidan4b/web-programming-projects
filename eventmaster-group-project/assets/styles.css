@@ -1,0 +1,682 @@
+:root {
+    --primary: #4c3dff;
+    --primary-dark: #3326d9;
+    --accent: #ff7eb3;
+    --accent-dark: #ff5086;
+    --bg: #f5f4ff;
+    --white: #ffffff;
+    --text: #222;
+    --muted: #666;
+    --border: #ddd;
+
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --radius-sm: 6px;
+
+    --shadow-soft: 0 10px 25px rgba(0,0,0,0.08);
+
+    --transition: 0.25s ease-in-out;
+}
+
+/* ------------ RESET ------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: linear-gradient(180deg, #f4f3ff, #faf9ff);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ------------ HEADER ------------ */
+.site-header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: var(--muted);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.nav-bar a:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Search */
+.header-actions input {
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+/* ------------ BUTTONS ------------ */
+.btn {
+    padding: 0.45rem 1.1rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+}
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ------------ CONTENT CONTAINER ------------ */
+.page-content {
+    max-width: 1150px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+/* ------------ SECTIONS ------------ */
+.section {
+    background: var(--white);
+    padding: 1.7rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.section h2,
+.section h1 {
+    margin-bottom: 0.7rem;
+}
+
+
+img.uniform-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+/* EVENTS GRID */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.event-card {
+    background: var(--white);
+    padding-bottom: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: transform 0.25s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+/* WHAT WE OFFER  */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+}
+
+.offer-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: 0.25s;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+/* TEAM SECTION */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.team-card {
+    background: var(--white);
+    padding-bottom: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* ------------ FORMS ------------ */
+.form-row input,
+.form-row select,
+.form-row textarea {
+    padding: 0.6rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: #fafaff;
+}
+
+/* ------------ TABLE ------------ */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.table th,
+.table td {
+    padding: 0.7rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ------------ FOOTER ------------ */
+.site-footer {
+    padding: 1rem;
+    text-align: center;
+    color: var(--muted);
+}
+
+/*COLOR BAR */
+.hero {
+    background: linear-gradient(135deg, #4c3dff, #7b5bff, #9b6bff);
+    color: var(--white);
+    padding: 2.8rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+.hero p {
+    font-size: 1.05rem;
+    max-width: 600px;
+    opacity: 0.95;
+    margin-bottom: 1rem;
+}
+
+.hero .btn-primary {
+    background: var(--white);
+    color: var(--primary);
+    font-weight: 700;
+    padding: 0.55rem 1.2rem;
+    border-radius: var(--radius-md);
+}
+
+.hero .btn-primary:hover {
+    background: #e6e0ff;
+    color: var(--primary-dark);
+}
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-footer {
+    margin-top: auto;
+    background: #ffffff;
+    padding: 1.2rem;
+    font-size: 16px;
+    color: var(--muted);
+    border-top: 1px solid #e5e5e5;
+}
+
+
+.section.contact-box {
+    max-width: 1100px;  
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+    font-size: 18px;   
+}
+
+
+/* UNIVERSAL INFO BOX */
+.info-box {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    width: 70%;
+    margin: 2rem auto; 
+    font-size: 17px;
+}
+
+/*BOOK NOW FORM — PROFESSIONAL DESIGN */
+
+/* Form section  */
+.section.book-form {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2.2rem 2.4rem;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    font-size: 18px;
+}
+
+/* Title */
+.section.book-form h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+/* Subtitle */
+.section.book-form p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Form layout */
+.book-form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+/* Labels */
+.book-form .form-row label {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+}
+
+/* Inputs, Select, Textarea */
+.book-form .form-row input,
+.book-form .form-row select,
+.book-form .form-row textarea {
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: #fafaff;
+    font-size: 1rem;
+    transition: 0.25s;
+}
+
+/* Focus glow */
+.book-form .form-row input:focus,
+.book-form .form-row select:focus,
+.book-form .form-row textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(76, 61, 255, 0.15);
+    outline: none;
+}
+
+/* Textarea bigger */
+.book-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit button */
+.book-form .btn-primary {
+    margin-top: 0.8rem;
+    padding: 0.75rem 1.4rem;
+    font-size: 1rem;
+    border-radius: var(--radius-md);
+}
+
+/* Error message */
+.alert.error {
+    background: #ffe6e6;
+    color: #cc0000;
+    padding: 0.9rem 1rem;
+    border: 1px solid #ffb3b3;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.section.book-form {
+    width: 100%;      
+    margin: 2rem auto;     
+    padding: 2rem 2.5rem;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+
+.section.book-form .form-row input,
+.section.book-form .form-row select,
+.section.book-form .form-row textarea {
+    width: 100%;
+}
+
+
+.section.book-form h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* SIGN IN / SIGN UP FORM */
+
+.auth-box,
+.signin-box,
+.signup-box,
+.login-box {
+    width: 550px !important;     
+    max-width: 90%;
+    margin: 3rem auto;
+    background: #ffffff;
+    padding: 2.5rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Input fields inside sign in form */
+.auth-box input,
+.signin-box input,
+.signup-box input,
+.login-box input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fafaff;
+    font-size: 16px;
+}
+
+/* Sign In heading */
+.auth-box h1,
+.signin-box h1,
+.signup-box h1,
+.login-box h1 {
+    font-size: 32px;
+    margin-bottom: 1rem;
+}
+
+ 
+.auth-box button,
+.signin-box button,
+.signup-box button,
+.login-box button {
+    display: block;
+    margin-top: 1rem;
+    width: 130px;
+    padding: 0.6rem;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+/* BOOK LIST ACTION BUTTONS */
+
+
+.btn-small {
+    background: #22c55e;  
+    color: white;
+    padding: 0.45rem 1.1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 3px 10px rgba(34, 197, 94, 0.25);
+}
+
+.btn-small:hover {
+    background: #16a34a;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);
+}
+
+
+.btn-danger {
+    background: #ef4444; /* red */
+    color: white;
+    padding: 0.45rem 1.1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 6px;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 3px 10px rgba(239, 68, 68, 0.25);
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+}
+
+/* Space between the two forms inside table */
+.table-actions form {
+    display: inline-block;
+}
+
+/* MY BOOKED EVENTS */
+
+/* Page header styling */
+.section h1 {
+    color: #4c3dff;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+/* Table container */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+}
+
+/* Table header */
+.table th {
+    background: #ece9ff;
+    color: #4c3dff;
+    padding: 0.8rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Table rows */
+.table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Highlight row on hover */
+.table tr:hover td {
+    background: #f7f5ff;
+}
+
+/* Inputs inside table */
+.table input,
+.table select,
+.table textarea {
+    width: 100%;
+    padding: 0.45rem 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #f9f8ff;
+    transition: 0.25s;
+}
+
+
+.table input:focus,
+.table select:focus,
+.table textarea:focus {
+    border-color: #4c3dff;
+    box-shadow: 0 0 6px rgba(76,61,255,0.3);
+}
+
+.table textarea {
+    height: 45px;
+    resize: vertical;
+}
+
+/* ACTION BUTTONS */
+.table-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+/* Update Button */
+.btn-update {
+    background: #4caf50 !important;
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.btn-update:hover {
+    background: #3d933f !important;
+}
+
+
+.btn-danger {
+    background: #ff4d4d !important;
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.btn-danger:hover {
+    background: #e63c3c !important;
+}
+
+/* SUCCESS ALERT */
+.alert.success {
+    background: #e7ffef;
+    border-left: 6px solid #2ab35d;
+    color: #1a7a39;
+    margin-bottom: 1.3rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+/* SIGN UP / LOGIN BOX */
+.auth-box {
+    width: 420px;
+    margin: 3rem auto;
+    background: #ffffff;
+    padding: 2rem 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.auth-box h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.auth-box .form-row {
+    margin-bottom: 1rem;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #f7f7ff;
+}
+
+.auth-box button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .events-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
